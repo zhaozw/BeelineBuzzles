@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC598AF3160AE0F900569441 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC598AF2160AE0F900569441 /* UIKit.framework */; };
+		CC598AF5160AE0F900569441 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC598AF4160AE0F900569441 /* Foundation.framework */; };
+		CC598AF7160AE0F900569441 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC598AF6160AE0F900569441 /* CoreGraphics.framework */; };
+		CC598AFD160AE0F900569441 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC598AFB160AE0F900569441 /* InfoPlist.strings */; };
+		CC598AFF160AE0FA00569441 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC598AFE160AE0FA00569441 /* main.m */; };
+		CC598B03160AE0FA00569441 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC598B02160AE0FA00569441 /* AppDelegate.m */; };
+		CC9071F8160C3229009965AA /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9071F6160C3229009965AA /* LoginView.m */; };
+		CC9071F9160C3229009965AA /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC9071F7160C3229009965AA /* LoginView.xib */; };
+		CC9071FC160C350A009965AA /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9071FB160C350A009965AA /* BaseViewController.m */; };
+		CC907203160C3902009965AA /* LoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC907202160C3902009965AA /* LoginCell.xib */; };
+		CC907207160C3C58009965AA /* PrizesView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC907205160C3C58009965AA /* PrizesView.m */; };
+		CC907208160C3C58009965AA /* PrizesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC907206160C3C58009965AA /* PrizesView.xib */; };
+		CC90720C160C3C6E009965AA /* AchievesView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC90720A160C3C6E009965AA /* AchievesView.m */; };
+		CC90720D160C3C6E009965AA /* AchievesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC90720B160C3C6E009965AA /* AchievesView.xib */; };
+		CC907211160C3C82009965AA /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC90720F160C3C82009965AA /* RatingView.m */; };
+		CC907212160C3C82009965AA /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC907210160C3C82009965AA /* RatingView.xib */; };
+		CC907216160C3CA3009965AA /* XXLView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC907214160C3CA3009965AA /* XXLView.m */; };
+		CC907217160C3CA3009965AA /* XXLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC907215160C3CA3009965AA /* XXLView.xib */; };
+		CC90721B160C3CD8009965AA /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC907219160C3CD8009965AA /* GameView.m */; };
+		CC90721C160C3CD8009965AA /* GameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC90721A160C3CD8009965AA /* GameView.xib */; };
+		CC90721F160C4354009965AA /* ViewInsideTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC90721E160C4354009965AA /* ViewInsideTabController.m */; };
+		CC90722B160C4B73009965AA /* wheel_handle.png in Resources */ = {isa = PBXBuildFile; fileRef = CC90722A160C4B73009965AA /* wheel_handle.png */; };
+		CC90722D160C4B87009965AA /* switch_handle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC90722C160C4B87009965AA /* switch_handle@2x.png */; };
+		CC907230160C4F77009965AA /* RatingManCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC90722F160C4F77009965AA /* RatingManCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CC598AEE160AE0F900569441 /* BeelineBuzzles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeelineBuzzles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC598AF2160AE0F900569441 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CC598AF4160AE0F900569441 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CC598AF6160AE0F900569441 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CC598AFA160AE0F900569441 /* BeelineBuzzles-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeelineBuzzles-Info.plist"; sourceTree = "<group>"; };
+		CC598AFC160AE0F900569441 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CC598AFE160AE0FA00569441 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC598B00160AE0FA00569441 /* BeelineBuzzles-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeelineBuzzles-Prefix.pch"; sourceTree = "<group>"; };
+		CC598B01160AE0FA00569441 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CC598B02160AE0FA00569441 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CC9071F5160C3229009965AA /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginView.h; path = Controllers/LoginView.h; sourceTree = "<group>"; };
+		CC9071F6160C3229009965AA /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginView.m; path = Controllers/LoginView.m; sourceTree = "<group>"; };
+		CC9071F7160C3229009965AA /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginView.xib; path = Controllers/LoginView.xib; sourceTree = "<group>"; };
+		CC9071FA160C350A009965AA /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = Controllers/BaseViewController.h; sourceTree = "<group>"; };
+		CC9071FB160C350A009965AA /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = Controllers/BaseViewController.m; sourceTree = "<group>"; };
+		CC907202160C3902009965AA /* LoginCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginCell.xib; path = Views/Login/LoginCell.xib; sourceTree = "<group>"; };
+		CC907204160C3C58009965AA /* PrizesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrizesView.h; path = Controllers/PrizesView.h; sourceTree = "<group>"; };
+		CC907205160C3C58009965AA /* PrizesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrizesView.m; path = Controllers/PrizesView.m; sourceTree = "<group>"; };
+		CC907206160C3C58009965AA /* PrizesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrizesView.xib; path = Controllers/PrizesView.xib; sourceTree = "<group>"; };
+		CC907209160C3C6E009965AA /* AchievesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AchievesView.h; path = Controllers/AchievesView.h; sourceTree = "<group>"; };
+		CC90720A160C3C6E009965AA /* AchievesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AchievesView.m; path = Controllers/AchievesView.m; sourceTree = "<group>"; };
+		CC90720B160C3C6E009965AA /* AchievesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AchievesView.xib; path = Controllers/AchievesView.xib; sourceTree = "<group>"; };
+		CC90720E160C3C82009965AA /* RatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RatingView.h; path = Controllers/RatingView.h; sourceTree = "<group>"; };
+		CC90720F160C3C82009965AA /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RatingView.m; path = Controllers/RatingView.m; sourceTree = "<group>"; };
+		CC907210160C3C82009965AA /* RatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RatingView.xib; path = Controllers/RatingView.xib; sourceTree = "<group>"; };
+		CC907213160C3CA3009965AA /* XXLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XXLView.h; path = Controllers/XXLView.h; sourceTree = "<group>"; };
+		CC907214160C3CA3009965AA /* XXLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XXLView.m; path = Controllers/XXLView.m; sourceTree = "<group>"; };
+		CC907215160C3CA3009965AA /* XXLView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XXLView.xib; path = Controllers/XXLView.xib; sourceTree = "<group>"; };
+		CC907218160C3CD7009965AA /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameView.h; path = Controllers/GameView.h; sourceTree = "<group>"; };
+		CC907219160C3CD8009965AA /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameView.m; path = Controllers/GameView.m; sourceTree = "<group>"; };
+		CC90721A160C3CD8009965AA /* GameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GameView.xib; path = Controllers/GameView.xib; sourceTree = "<group>"; };
+		CC90721D160C4354009965AA /* ViewInsideTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewInsideTabController.h; path = Controllers/ViewInsideTabController.h; sourceTree = "<group>"; };
+		CC90721E160C4354009965AA /* ViewInsideTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewInsideTabController.m; path = Controllers/ViewInsideTabController.m; sourceTree = "<group>"; };
+		CC90722A160C4B73009965AA /* wheel_handle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wheel_handle.png; sourceTree = "<group>"; };
+		CC90722C160C4B87009965AA /* switch_handle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch_handle@2x.png"; sourceTree = "<group>"; };
+		CC90722F160C4F77009965AA /* RatingManCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RatingManCell.xib; path = Views/Rating/RatingManCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC598AEB160AE0F900569441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC598AF3160AE0F900569441 /* UIKit.framework in Frameworks */,
+				CC598AF5160AE0F900569441 /* Foundation.framework in Frameworks */,
+				CC598AF7160AE0F900569441 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC598AE3160AE0F900569441 = {
+			isa = PBXGroup;
+			children = (
+				CC598AF8160AE0F900569441 /* BeelineBuzzles */,
+				CC598AF1160AE0F900569441 /* Frameworks */,
+				CC598AEF160AE0F900569441 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC598AEF160AE0F900569441 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC598AEE160AE0F900569441 /* BeelineBuzzles.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC598AF1160AE0F900569441 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC598AF2160AE0F900569441 /* UIKit.framework */,
+				CC598AF4160AE0F900569441 /* Foundation.framework */,
+				CC598AF6160AE0F900569441 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC598AF8160AE0F900569441 /* BeelineBuzzles */ = {
+			isa = PBXGroup;
+			children = (
+				CC907229160C4B5E009965AA /* Resources */,
+				CC9071F4160C2E7D009965AA /* Controllers */,
+				CC9071F3160C2E76009965AA /* Views */,
+				CC9071F2160C2E6C009965AA /* Models */,
+				CC598B01160AE0FA00569441 /* AppDelegate.h */,
+				CC598B02160AE0FA00569441 /* AppDelegate.m */,
+				CC598AF9160AE0F900569441 /* Supporting Files */,
+			);
+			path = BeelineBuzzles;
+			sourceTree = "<group>";
+		};
+		CC598AF9160AE0F900569441 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC598AFA160AE0F900569441 /* BeelineBuzzles-Info.plist */,
+				CC598AFB160AE0F900569441 /* InfoPlist.strings */,
+				CC598AFE160AE0FA00569441 /* main.m */,
+				CC598B00160AE0FA00569441 /* BeelineBuzzles-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC9071F2160C2E6C009965AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CC9071F3160C2E76009965AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC90722E160C4F57009965AA /* Rating */,
+				CC907206160C3C58009965AA /* PrizesView.xib */,
+				CC90720B160C3C6E009965AA /* AchievesView.xib */,
+				CC907215160C3CA3009965AA /* XXLView.xib */,
+				CC90721A160C3CD8009965AA /* GameView.xib */,
+				CC907201160C38B3009965AA /* Login */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CC9071F4160C2E7D009965AA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CC9071F5160C3229009965AA /* LoginView.h */,
+				CC9071F6160C3229009965AA /* LoginView.m */,
+				CC9071FA160C350A009965AA /* BaseViewController.h */,
+				CC9071FB160C350A009965AA /* BaseViewController.m */,
+				CC907204160C3C58009965AA /* PrizesView.h */,
+				CC907205160C3C58009965AA /* PrizesView.m */,
+				CC907209160C3C6E009965AA /* AchievesView.h */,
+				CC90720A160C3C6E009965AA /* AchievesView.m */,
+				CC90720E160C3C82009965AA /* RatingView.h */,
+				CC90720F160C3C82009965AA /* RatingView.m */,
+				CC907213160C3CA3009965AA /* XXLView.h */,
+				CC907214160C3CA3009965AA /* XXLView.m */,
+				CC907218160C3CD7009965AA /* GameView.h */,
+				CC907219160C3CD8009965AA /* GameView.m */,
+				CC90721D160C4354009965AA /* ViewInsideTabController.h */,
+				CC90721E160C4354009965AA /* ViewInsideTabController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CC907201160C38B3009965AA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CC9071F7160C3229009965AA /* LoginView.xib */,
+				CC907202160C3902009965AA /* LoginCell.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		CC907229160C4B5E009965AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC90722A160C4B73009965AA /* wheel_handle.png */,
+				CC90722C160C4B87009965AA /* switch_handle@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CC90722E160C4F57009965AA /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				CC907210160C3C82009965AA /* RatingView.xib */,
+				CC90722F160C4F77009965AA /* RatingManCell.xib */,
+			);
+			name = Rating;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC598AED160AE0F900569441 /* BeelineBuzzles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC598B1A160AE0FA00569441 /* Build configuration list for PBXNativeTarget "BeelineBuzzles" */;
+			buildPhases = (
+				CC598AEA160AE0F900569441 /* Sources */,
+				CC598AEB160AE0F900569441 /* Frameworks */,
+				CC598AEC160AE0F900569441 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeelineBuzzles;
+			productName = BeelineBuzzles;
+			productReference = CC598AEE160AE0F900569441 /* BeelineBuzzles.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC598AE5160AE0F900569441 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = Create;
+			};
+			buildConfigurationList = CC598AE8160AE0F900569441 /* Build configuration list for PBXProject "BeelineBuzzles" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CC598AE3160AE0F900569441;
+			productRefGroup = CC598AEF160AE0F900569441 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC598AED160AE0F900569441 /* BeelineBuzzles */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC598AEC160AE0F900569441 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC598AFD160AE0F900569441 /* InfoPlist.strings in Resources */,
+				CC9071F9160C3229009965AA /* LoginView.xib in Resources */,
+				CC907203160C3902009965AA /* LoginCell.xib in Resources */,
+				CC907208160C3C58009965AA /* PrizesView.xib in Resources */,
+				CC90720D160C3C6E009965AA /* AchievesView.xib in Resources */,
+				CC907212160C3C82009965AA /* RatingView.xib in Resources */,
+				CC907217160C3CA3009965AA /* XXLView.xib in Resources */,
+				CC90721C160C3CD8009965AA /* GameView.xib in Resources */,
+				CC90722B160C4B73009965AA /* wheel_handle.png in Resources */,
+				CC90722D160C4B87009965AA /* switch_handle@2x.png in Resources */,
+				CC907230160C4F77009965AA /* RatingManCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC598AEA160AE0F900569441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC598AFF160AE0FA00569441 /* main.m in Sources */,
+				CC598B03160AE0FA00569441 /* AppDelegate.m in Sources */,
+				CC9071F8160C3229009965AA /* LoginView.m in Sources */,
+				CC9071FC160C350A009965AA /* BaseViewController.m in Sources */,
+				CC907207160C3C58009965AA /* PrizesView.m in Sources */,
+				CC90720C160C3C6E009965AA /* AchievesView.m in Sources */,
+				CC907211160C3C82009965AA /* RatingView.m in Sources */,
+				CC907216160C3CA3009965AA /* XXLView.m in Sources */,
+				CC90721B160C3CD8009965AA /* GameView.m in Sources */,
+				CC90721F160C4354009965AA /* ViewInsideTabController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CC598AFB160AE0F900569441 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC598AFC160AE0F900569441 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC598B18160AE0FA00569441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CC598B19160AE0FA00569441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC598B1B160AE0FA00569441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Кирилл Кунст (7J3RNQ6456)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BeelineBuzzles/BeelineBuzzles-Prefix.pch";
+				INFOPLIST_FILE = "BeelineBuzzles/BeelineBuzzles-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4B629209-1F9B-48B1-862E-73770DACFD22";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CC598B1C160AE0FA00569441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Кирилл Кунст (7J3RNQ6456)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BeelineBuzzles/BeelineBuzzles-Prefix.pch";
+				INFOPLIST_FILE = "BeelineBuzzles/BeelineBuzzles-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4B629209-1F9B-48B1-862E-73770DACFD22";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC598AE8160AE0F900569441 /* Build configuration list for PBXProject "BeelineBuzzles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC598B18160AE0FA00569441 /* Debug */,
+				CC598B19160AE0FA00569441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC598B1A160AE0FA00569441 /* Build configuration list for PBXNativeTarget "BeelineBuzzles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC598B1B160AE0FA00569441 /* Debug */,
+				CC598B1C160AE0FA00569441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC598AE5160AE0F900569441 /* Project object */;
+}
