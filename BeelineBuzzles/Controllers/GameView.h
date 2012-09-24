@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "ViewInsideTabController.h"
 
+/**
+ Стартовый экран игры, с кнопкой "Начать игру"
+ */
 @interface GameView : ViewInsideTabController
 @end

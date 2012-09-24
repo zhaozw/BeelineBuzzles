@@ -97,6 +97,7 @@
     [self.navigationController pushViewController:tabBarController animated:YES];
 }
 
+
 -(UITabBarController *)tabBar{
     UITabBarController *tabController = [[UITabBarController alloc] init];
     PrizesView *firstView = [[PrizesView alloc] initWithNibName:@"PrizesView" bundle:nil];
@@ -121,4 +122,32 @@
     [tabController setSelectedIndex:2];
     return tabController;
 }
+
+-(void)customizeNavController{
+    UIToolbar *tools = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 103.0f, 44.01f)];
+    tools.clearsContextBeforeDrawing = NO;
+    tools.clipsToBounds = NO;
+    tools.tintColor = self.navigationController.navigationBar.tintColor;
+    tools.barStyle = -1; // clear background
+    NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:3];
+    
+    // Create a standard refresh button.
+    UIBarButtonItem *bi = [[UIBarButtonItem alloc]
+                           initWithBarButtonSystemItem:UIBarButtonSystemItemFastForward target:self action:@selector(refresh:)];
+    [buttons addObject:bi];
+    
+    // Create a spacer.
+    bi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    bi.width = 12.0f;
+    [buttons addObject:bi];
+    
+    // Add profile button.
+    bi = [[UIBarButtonItem alloc] initWithTitle:@"Info" style:UIBarButtonItemStylePlain target:self action:@selector(goToProfile)];
+    bi.style = UIBarButtonItemStyleBordered;
+    [buttons addObject:bi];
+    [tools setItems:buttons animated:NO];
+    UIBarButtonItem *twoButtons = [[UIBarButtonItem alloc] initWithCustomView:tools];
+    self.navigationItem.rightBarButtonItem = twoButtons;
+}
+
 @end

@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ Базовый контроллер
+ */
 @interface BaseViewController : UIViewController
+/**
+ Инициализация графических элементов
+ */
 -(void)initUI;
+
+/**
+ Инициализация navigation bar
+ */
 -(void)initTopBar;
 
 @end

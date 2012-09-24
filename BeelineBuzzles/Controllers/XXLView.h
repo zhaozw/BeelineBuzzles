@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewInsideTabController.h"
 
-@interface XXLView : UIViewController
+/**
+ Экран "XXL - розыгрыш"
+ */
+@interface XXLView : ViewInsideTabController
 
 @end

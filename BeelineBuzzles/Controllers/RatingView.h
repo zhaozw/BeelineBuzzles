@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "ViewInsideTabController.h"
 
+/**
+ Экран "Рейтинг"
+ */
 @interface RatingView : ViewInsideTabController<UITableViewDataSource,UITableViewDelegate, UITextFieldDelegate>
 @property (unsafe_unretained, nonatomic) IBOutlet UITableView *tableView;
 

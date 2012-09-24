@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "ViewInsideTabController.h"
 
+/**
+ Экран "Призы"
+ */
 @interface PrizesView : ViewInsideTabController
 @end

@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "ViewInsideTabController.h"
 
+/**
+ Экран Достижения
+ */
 @interface AchievesView : ViewInsideTabController
 @property (unsafe_unretained, nonatomic) IBOutlet UIScrollView *scrollView;
 

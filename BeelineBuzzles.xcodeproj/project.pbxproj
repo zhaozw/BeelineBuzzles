@@ -13,6 +13,8 @@
 		CC598AFD160AE0F900569441 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC598AFB160AE0F900569441 /* InfoPlist.strings */; };
 		CC598AFF160AE0FA00569441 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC598AFE160AE0FA00569441 /* main.m */; };
 		CC598B03160AE0FA00569441 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC598B02160AE0FA00569441 /* AppDelegate.m */; };
+		CC667F1D1610657200B001CC /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC667F1C1610657200B001CC /* InfoCell.xib */; };
+		CC667F20161065B200B001CC /* Information.m in Sources */ = {isa = PBXBuildFile; fileRef = CC667F1F161065B200B001CC /* Information.m */; };
 		CC9071F8160C3229009965AA /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9071F6160C3229009965AA /* LoginView.m */; };
 		CC9071F9160C3229009965AA /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC9071F7160C3229009965AA /* LoginView.xib */; };
 		CC9071FC160C350A009965AA /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9071FB160C350A009965AA /* BaseViewController.m */; };
@@ -31,6 +33,8 @@
 		CC90722B160C4B73009965AA /* wheel_handle.png in Resources */ = {isa = PBXBuildFile; fileRef = CC90722A160C4B73009965AA /* wheel_handle.png */; };
 		CC90722D160C4B87009965AA /* switch_handle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC90722C160C4B87009965AA /* switch_handle@2x.png */; };
 		CC907230160C4F77009965AA /* RatingManCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC90722F160C4F77009965AA /* RatingManCell.xib */; };
+		CCF34EBF1610186D006F3D99 /* InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF34EBD1610186D006F3D99 /* InfoView.m */; };
+		CCF34EC01610186D006F3D99 /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCF34EBE1610186D006F3D99 /* InfoView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,9 @@
 		CC598B00160AE0FA00569441 /* BeelineBuzzles-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeelineBuzzles-Prefix.pch"; sourceTree = "<group>"; };
 		CC598B01160AE0FA00569441 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC598B02160AE0FA00569441 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CC667F1C1610657200B001CC /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoCell.xib; path = Views/Info/InfoCell.xib; sourceTree = "<group>"; };
+		CC667F1E161065B200B001CC /* Information.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Information.h; path = Models/Information.h; sourceTree = "<group>"; };
+		CC667F1F161065B200B001CC /* Information.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Information.m; path = Models/Information.m; sourceTree = "<group>"; };
 		CC9071F5160C3229009965AA /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginView.h; path = Controllers/LoginView.h; sourceTree = "<group>"; };
 		CC9071F6160C3229009965AA /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginView.m; path = Controllers/LoginView.m; sourceTree = "<group>"; };
 		CC9071F7160C3229009965AA /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginView.xib; path = Controllers/LoginView.xib; sourceTree = "<group>"; };
@@ -70,6 +77,9 @@
 		CC90722A160C4B73009965AA /* wheel_handle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wheel_handle.png; sourceTree = "<group>"; };
 		CC90722C160C4B87009965AA /* switch_handle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch_handle@2x.png"; sourceTree = "<group>"; };
 		CC90722F160C4F77009965AA /* RatingManCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RatingManCell.xib; path = Views/Rating/RatingManCell.xib; sourceTree = "<group>"; };
+		CCF34EBC1610186D006F3D99 /* InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoView.h; path = Controllers/InfoView.h; sourceTree = "<group>"; };
+		CCF34EBD1610186D006F3D99 /* InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoView.m; path = Controllers/InfoView.m; sourceTree = "<group>"; };
+		CCF34EBE1610186D006F3D99 /* InfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoView.xib; path = Controllers/InfoView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,9 +148,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CC667F1A1610655900B001CC /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				CC667F1C1610657200B001CC /* InfoCell.xib */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
 		CC9071F2160C2E6C009965AA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CC667F1E161065B200B001CC /* Information.h */,
+				CC667F1F161065B200B001CC /* Information.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -148,9 +168,11 @@
 		CC9071F3160C2E76009965AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CC667F1A1610655900B001CC /* Info */,
 				CC90722E160C4F57009965AA /* Rating */,
 				CC907206160C3C58009965AA /* PrizesView.xib */,
 				CC90720B160C3C6E009965AA /* AchievesView.xib */,
+				CCF34EBE1610186D006F3D99 /* InfoView.xib */,
 				CC907215160C3CA3009965AA /* XXLView.xib */,
 				CC90721A160C3CD8009965AA /* GameView.xib */,
 				CC907201160C38B3009965AA /* Login */,
@@ -177,6 +199,8 @@
 				CC907219160C3CD8009965AA /* GameView.m */,
 				CC90721D160C4354009965AA /* ViewInsideTabController.h */,
 				CC90721E160C4354009965AA /* ViewInsideTabController.m */,
+				CCF34EBC1610186D006F3D99 /* InfoView.h */,
+				CCF34EBD1610186D006F3D99 /* InfoView.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -270,6 +294,8 @@
 				CC90722B160C4B73009965AA /* wheel_handle.png in Resources */,
 				CC90722D160C4B87009965AA /* switch_handle@2x.png in Resources */,
 				CC907230160C4F77009965AA /* RatingManCell.xib in Resources */,
+				CCF34EC01610186D006F3D99 /* InfoView.xib in Resources */,
+				CC667F1D1610657200B001CC /* InfoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +316,8 @@
 				CC907216160C3CA3009965AA /* XXLView.m in Sources */,
 				CC90721B160C3CD8009965AA /* GameView.m in Sources */,
 				CC90721F160C4354009965AA /* ViewInsideTabController.m in Sources */,
+				CCF34EBF1610186D006F3D99 /* InfoView.m in Sources */,
+				CC667F20161065B200B001CC /* Information.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
