@@ -37,6 +37,7 @@
 - (void)viewDidUnload
 {
     [self setTableView:nil];
+    [self setBtnCheck:nil];
     [super viewDidUnload];
 }
 
@@ -68,13 +69,15 @@
     
     UILabel *lblText = (UILabel *)[cell viewWithTag:1];
     UITextField *txtField = (UITextField *)[cell viewWithTag:2];
+    UIButton *btnQuestion = (UIButton *)[cell viewWithTag:5];
     txtField.delegate = self;
     if (indexPath.row == 0){
         lblText.text = @"Логин";
-        txtField.placeholder = @"Логин";
+        //txtField.placeholder = @"Логин";
     } else if (indexPath.row == 1){
         lblText.text = @"Пароль";
-        txtField.placeholder = @"Пароль";
+        btnQuestion.hidden = YES;
+        //txtField.placeholder = @"Пароль";
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -109,6 +112,16 @@
         [btn setTitle:@"Зарегистрирован" forState:UIControlStateSelected];
     }
     
+}
+
+- (IBAction)checkClick:(id)sender {
+    if (self.btnCheck.isSelected){
+        [self.btnCheck setSelected:NO];
+        [self.btnCheck setImage:[UIImage imageNamed:@"unchek"] forState:UIControlStateNormal];
+    } else {
+        [self.btnCheck setSelected:YES];
+        [self.btnCheck setImage:[UIImage imageNamed:@"chek"] forState:UIControlStateSelected];
+    }
 }
 
 

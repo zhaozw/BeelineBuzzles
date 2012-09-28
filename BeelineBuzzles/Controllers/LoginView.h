@@ -14,9 +14,11 @@
  */
 @interface LoginView : BaseViewController<UITableViewDataSource,UITableViewDelegate, UITextFieldDelegate>
 
+@property (strong, nonatomic) IBOutlet UIButton *btnCheck;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)loginClick:(id)sender;
 - (IBAction)registerClick:(id)sender;
+- (IBAction)checkClick:(id)sender;
 
 /**
  Инициализация TabBar

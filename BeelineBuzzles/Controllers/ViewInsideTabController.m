@@ -8,6 +8,7 @@
 
 #import "ViewInsideTabController.h"
 #import "InfoView.h"
+#import "SettingsViewViewController.h"
 
 @interface ViewInsideTabController ()
 
@@ -95,7 +96,7 @@
     
 	someButton = [[UIButton alloc] initWithFrame:frameimg];
 	[someButton setBackgroundImage:image3 forState:UIControlStateNormal];
-	[someButton addTarget:self action:@selector(goToInfo:)
+	[someButton addTarget:self action:@selector(goToSettings:)
 		 forControlEvents:UIControlEventTouchUpInside];
     
 	UIBarButtonItem *settingsBtn =[[UIBarButtonItem alloc] initWithCustomView:someButton];
@@ -116,7 +117,8 @@
 }
 
 -(void)goToSettings:(id)sender{
-    
+    SettingsViewViewController *v= [[SettingsViewViewController alloc] initWithNibName:@"SettingsViewViewController" bundle:nil];
+    [self.tabBarController.navigationController pushViewController:v animated:YES];
 }
 
 @end

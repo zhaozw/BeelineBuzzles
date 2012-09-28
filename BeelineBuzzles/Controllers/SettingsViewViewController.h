@@ -8,6 +8,14 @@
 
 #import "BaseViewController.h"
 
-@interface SettingsViewViewController : BaseViewController
+@interface SettingsViewViewController : BaseViewController<UITextFieldDelegate>
+
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollVIew;
+@property (strong, nonatomic) IBOutlet UITextField *fieldCurrentPassword;
+@property (strong, nonatomic) IBOutlet UITextField *fieldNewPassword;
+@property (strong, nonatomic) IBOutlet UITextField *fieldRepeatPassword;
+@property (strong, nonatomic) IBOutlet UIButton *btnNotifications;
+- (IBAction)notificationClick:(id)sender;
+- (IBAction)saveClick:(id)sender;
 
 @end

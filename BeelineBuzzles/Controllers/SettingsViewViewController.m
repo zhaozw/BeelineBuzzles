@@ -37,6 +37,10 @@
 
 -(void)initUI{
     [self initTopBar];
+    self.scrollVIew.contentSize =CGSizeMake(320,700);
+    self.fieldCurrentPassword.delegate = self;
+    self.fieldNewPassword.delegate = self;
+    self.fieldRepeatPassword.delegate = self;
 }
 
 -(void)initTopBar{
@@ -54,4 +58,34 @@
     self.navigationItem.title = @"Настройки";
 }
 
+-(void)leftBarItemClick:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)viewDidUnload {
+    [self setScrollVIew:nil];
+    [self setFieldCurrentPassword:nil];
+    [self setFieldNewPassword:nil];
+    [self setFieldRepeatPassword:nil];
+    [self setBtnNotifications:nil];
+    [super viewDidUnload];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+- (IBAction)notificationClick:(id)sender {
+    if (self.btnNotifications.isSelected) {
+        [self.btnNotifications setSelected:NO];
+        [self.btnNotifications setImage:[UIImage imageNamed:@"tog_off"] forState:UIControlStateNormal];
+    } else {
+        [self.btnNotifications setSelected:YES];
+        [self.btnNotifications setImage:[UIImage imageNamed:@"tog_on"] forState:UIControlStateSelected];
+    }
+}
+
+- (IBAction)saveClick:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end
