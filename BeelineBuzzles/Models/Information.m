@@ -9,6 +9,7 @@
 #import "Information.h"
 
 @implementation Information
+@synthesize name;
 
 -(id)initWithName:(NSString *)name{
     self.name = name;

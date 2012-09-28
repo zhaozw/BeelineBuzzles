@@ -12,5 +12,7 @@
 /**
  Стартовый экран игры, с кнопкой "Начать игру"
  */
-@interface GameView : ViewInsideTabController
+@interface GameView : ViewInsideTabController<UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *gamesTable;
 @end

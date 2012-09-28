@@ -22,4 +22,8 @@
  */
 -(void)initTopBar;
 
+/**
+ Клик по кнопке "Выйти
+ */
+-(void)leftBarItemClick:(id)sender;
 @end

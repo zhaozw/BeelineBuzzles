@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewInsideTabController.h"
+#import "DepositView.h"
 
 /**
  Экран "Призы"
  */
 @interface PrizesView : ViewInsideTabController
+- (IBAction)goToDepositClick:(id)sender;
 @end

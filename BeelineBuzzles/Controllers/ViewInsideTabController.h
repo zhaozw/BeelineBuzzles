@@ -13,10 +13,7 @@
  инкапсулирует отображение корректного navigationBar 
  */
 @interface ViewInsideTabController : BaseViewController
-/**
- Клик по кнопке "Выйти
- */
--(void)leftBarItemClick:(id)sender;
+
 
 /**
  Клик по кнопке Info
@@ -32,4 +29,6 @@
  Кастомизация бара 
  */
 -(void)customizeNavController;
+
+-(void)addLogoToTopBar;
 @end

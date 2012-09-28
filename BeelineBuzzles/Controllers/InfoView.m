@@ -38,9 +38,28 @@
 }
 
 -(void)initUI{
-    self.navigationItem.title = @"Информация";
+    [self initTopBar];
     self.infoTable.delegate = self;
     self.infoTable.dataSource = self;
+}
+
+-(void)initTopBar{
+    UIImage* image3 = [UIImage imageNamed:@"btn_game"];
+    CGRect frameimg = CGRectMake(0, 0, 51, 30);
+    
+	UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
+	[someButton setBackgroundImage:image3 forState:UIControlStateNormal];
+	[someButton addTarget:self action:@selector(leftBarItemClick:)
+		 forControlEvents:UIControlEventTouchUpInside];
+    
+	UIBarButtonItem *backBtn =[[UIBarButtonItem alloc] initWithCustomView:someButton];
+    self.navigationItem.leftBarButtonItem = backBtn;
+    
+    self.navigationItem.title = @"Информация";
+}
+
+-(void)leftBarItemClick:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - UITableView Datasource

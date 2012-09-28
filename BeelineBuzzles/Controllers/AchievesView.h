@@ -14,5 +14,11 @@
  */
 @interface AchievesView : ViewInsideTabController
 @property (unsafe_unretained, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *achieveButtons;
+@property (strong,nonatomic) UIImageView *selectImageView;
 
+
+-(void)onImageTap:(id)sender;
+
+-(UIView *)labelWithText:(NSString *)text aboveButton:(UIButton *)btn;
 @end

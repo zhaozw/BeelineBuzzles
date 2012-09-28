@@ -65,6 +65,7 @@
     if (!cell) {
         cell = [[[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:nil options:nil] objectAtIndex:0];
     }
+    
     UILabel *lblText = (UILabel *)[cell viewWithTag:1];
     UITextField *txtField = (UITextField *)[cell viewWithTag:2];
     txtField.delegate = self;
@@ -94,7 +95,20 @@
 
 - (IBAction)loginClick:(id)sender {
     UITabBarController *tabBarController = [self tabBar];
+    
     [self.navigationController pushViewController:tabBarController animated:YES];
+}
+
+- (IBAction)registerClick:(id)sender {
+    UIButton *btn = (UIButton *)sender;
+    if (btn.isSelected){
+        [btn setSelected:NO];
+        [btn setTitle:@"Зарегистроваться" forState:UIControlStateNormal];
+    } else {
+        [btn setSelected:YES];
+        [btn setTitle:@"Зарегистрирован" forState:UIControlStateSelected];
+    }
+    
 }
 
 
@@ -109,8 +123,45 @@
     NSArray *viewControllersArray = [[NSArray alloc] initWithObjects:firstView, secondView, thirdView, foursView,fifthView, nil];
     [tabController setViewControllers:viewControllersArray animated:YES];
     
+    // бэкграунд для таб бара
+    if ([tabController.tabBar respondsToSelector:@selector(setBackgroundImage:)])
+    {
+        // ios 5 code here
+        //tabController.tabBar.frame = CGRectMake(0, -5, 320, 60);
+        [tabController.tabBar setBackgroundImage:[UIImage imageNamed:@"background"]];
+        
+    }
+    else
+    {
+        // ios 4 code here
+        CGRect frame = CGRectMake(0, 0, 320, 60);
+        UIView *tabbg_view = [[UIView alloc] initWithFrame:frame];
+        UIImage *tabbag_image = [UIImage imageNamed:@"background"];
+        UIColor *tabbg_color = [[UIColor alloc] initWithPatternImage:tabbag_image];
+        tabbg_view.backgroundColor = tabbg_color;
+        [tabController.tabBar insertSubview:tabbg_view atIndex:0];
+    }
+
+    [tabController.tabBar setSelectionIndicatorImage:[[UIImage alloc] init]];
+    
+    UIImage *selectedImage0 = [UIImage imageNamed:@"icon_1_prize_1"];
+    UIImage *unselectedImage0 = [UIImage imageNamed:@"icon_1_prize_0"];
+    
+    UIImage *selectedImage1 = [UIImage imageNamed:@"icon_2-1"];
+    UIImage *unselectedImage1 = [UIImage imageNamed:@"icon_2-0"];
+    
+    UIImage *selectedImage2 = [UIImage imageNamed:@"button_game_1"];
+    UIImage *unselectedImage2 = [UIImage imageNamed:@"button_game_0"];
+    
+    UIImage *selectedImage3 = [UIImage imageNamed:@"icon_3-1"];
+    UIImage *unselectedImage3 = [UIImage imageNamed:@"icon_3-0"];
+    
+    UIImage *selectedImage4 = [UIImage imageNamed:@"icon_4-1"];
+    UIImage *unselectedImage4 = [UIImage imageNamed:@"icon_4-0"];
+    
     UITabBarItem *item0 = [tabController.tabBar.items objectAtIndex:0];
     item0.title = @"Призы";
+    
     UITabBarItem *item1 = [tabController.tabBar.items objectAtIndex:1];
     item1.title = @"Достижения";
     UITabBarItem *item2 = [tabController.tabBar.items objectAtIndex:2];
@@ -119,6 +170,29 @@
     item3.title = @"Рейтинг";
     UITabBarItem *item4 = [tabController.tabBar.items objectAtIndex:4];
     item4.title = @"XXL-розыгрыш";
+    
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
+    button.frame = CGRectMake(0.0, 0.0, unselectedImage2.size.width, unselectedImage2.size.height);
+    [button setBackgroundImage:unselectedImage2 forState:UIControlStateNormal];
+    [button setBackgroundImage:selectedImage2 forState:UIControlStateHighlighted];
+    
+    CGFloat heightDifference = unselectedImage2.size.height - tabController.tabBar.frame.size.height;
+    if (heightDifference < 0)
+        button.center = tabController.tabBar.center;
+    else
+    {
+        CGPoint center = tabController.tabBar.center;
+        center.y = center.y - heightDifference/2.0;
+        button.center = center;
+    }
+    
+    [item0 setFinishedSelectedImage:selectedImage0 withFinishedUnselectedImage:unselectedImage0];
+    [item1 setFinishedSelectedImage:selectedImage1 withFinishedUnselectedImage:unselectedImage1];
+    [item2 setFinishedSelectedImage:selectedImage2 withFinishedUnselectedImage:unselectedImage2];
+    [item3 setFinishedSelectedImage:selectedImage3 withFinishedUnselectedImage:unselectedImage3];
+    [item4 setFinishedSelectedImage:selectedImage4 withFinishedUnselectedImage:unselectedImage4];
+   // [tabController.view addSubview:button];
     [tabController setSelectedIndex:2];
     return tabController;
 }

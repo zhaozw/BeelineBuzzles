@@ -36,4 +36,8 @@
     [super viewWillAppear:animated];
 }
 
+- (IBAction)goToDepositClick:(id)sender {
+    DepositView *v = [[DepositView alloc] initWithNibName:@"DepositView" bundle:nil];
+    [self.tabBarController.navigationController pushViewController:v animated:YES];
+}
 @end

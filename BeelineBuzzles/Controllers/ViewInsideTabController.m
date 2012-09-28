@@ -44,12 +44,29 @@
 }
 
 
+-(void)addLogoToTopBar{
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bar_title.png"]];
+    self.tabBarController.navigationItem.titleView = imageView;
+}
+
 -(void)initTopBar{
     self.tabBarController.navigationItem.title = @"Баззлы";
     self.tabBarController.navigationController.navigationBarHidden = NO;
-    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Выйти" style:UIBarButtonItemStylePlain target:self action:@selector(leftBarItemClick:)];;
-    self.tabBarController.navigationItem.leftBarButtonItem = cancelButton;
+    
+    UIImage* image3 = [UIImage imageNamed:@"bar_btn_exit"];
+    CGRect frameimg = CGRectMake(0, 0, 61, 30);
+    //UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
+    
+	UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
+	[someButton setBackgroundImage:image3 forState:UIControlStateNormal];
+	[someButton addTarget:self action:@selector(leftBarItemClick:)
+		 forControlEvents:UIControlEventTouchUpInside];
+    
+	UIBarButtonItem *backBtn =[[UIBarButtonItem alloc] initWithCustomView:someButton];
+    self.tabBarController.navigationItem.leftBarButtonItem = backBtn;
+    
     [self customizeNavController];
+    [self addLogoToTopBar];
 
 }
 
@@ -61,17 +78,32 @@
     tools.barStyle = -1; // clear background
     NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:3];
     
-    // Create a standard refresh button.
-    UIBarButtonItem *bi = [[UIBarButtonItem alloc] initWithTitle:@"i" style:UIBarButtonItemStyleBordered target:self action:@selector(goToInfo:)];
-    [buttons addObject:bi];
     
-    // Add profile button.
-    bi = [[UIBarButtonItem alloc] initWithTitle:@"S" style:UIBarButtonItemStylePlain target:self action:@selector(goToSettings:)];
-    bi.style = UIBarButtonItemStyleBordered;
-    [buttons addObject:bi];
+    UIImage* image3 = [UIImage imageNamed:@"bar_btn_info"];
+    CGRect frameimg = CGRectMake(0, 0, 30, 30);
     
+	UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
+	[someButton setBackgroundImage:image3 forState:UIControlStateNormal];
+	[someButton addTarget:self action:@selector(goToInfo:)
+		 forControlEvents:UIControlEventTouchUpInside];
+    
+	UIBarButtonItem *infoBtn =[[UIBarButtonItem alloc] initWithCustomView:someButton];
+    [buttons addObject:infoBtn];
+    
+    image3 = [UIImage imageNamed:@"bar_btn_setting"];
+    frameimg = CGRectMake(0, 0, 25, 25);
+    
+	someButton = [[UIButton alloc] initWithFrame:frameimg];
+	[someButton setBackgroundImage:image3 forState:UIControlStateNormal];
+	[someButton addTarget:self action:@selector(goToInfo:)
+		 forControlEvents:UIControlEventTouchUpInside];
+    
+	UIBarButtonItem *settingsBtn =[[UIBarButtonItem alloc] initWithCustomView:someButton];
+    [buttons addObject:settingsBtn];
+        
     [tools setItems:buttons animated:NO];
     self.tabBarController.navigationItem.rightBarButtonItems = buttons;
+    
 }
 
 -(void)leftBarItemClick:(id)sender{

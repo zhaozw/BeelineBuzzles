@@ -17,6 +17,7 @@
     // Override point for customization after application launch.
     LoginView *v = [[LoginView alloc] initWithNibName:@"LoginView" bundle:nil];
     self.navController = [[UINavigationController alloc] initWithRootViewController:v];
+    [SCAppUtils customizeNavigationController:self.navController];
     self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
     return YES;

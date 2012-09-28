@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-
+#import "SCAppUtils.h"
 /**
  Экран авторизации
  */
@@ -16,6 +16,7 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)loginClick:(id)sender;
+- (IBAction)registerClick:(id)sender;
 
 /**
  Инициализация TabBar
