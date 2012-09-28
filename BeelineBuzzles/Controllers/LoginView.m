@@ -207,6 +207,16 @@
     [item4 setFinishedSelectedImage:selectedImage4 withFinishedUnselectedImage:unselectedImage4];
    // [tabController.view addSubview:button];
     [tabController setSelectedIndex:2];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor colorWithRed:0.97f green:0.67f blue:0.04f alpha:1.00f], UITextAttributeTextColor,
+      [UIFont fontWithName:@"font" size:0.0], UITextAttributeFont,
+      nil]
+                                             forState:UIControlStateHighlighted];
+    
+
+     
     return tabController;
 }
 
