@@ -12,6 +12,8 @@
 #import "RatingView.h"
 #import "XXLView.h"
 #import "GameView.h"
+#import "InfoView.h"
+#import "PasswordRecoveryViewViewController.h"
 
 @interface LoginView ()
 
@@ -47,7 +49,30 @@
 -(void)initUI{
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.navigationController.navigationBarHidden = YES;
+    //self.navigationController.navigationBarHidden = YES;
+    [self initTopBar];
+}
+
+-(void)initTopBar{
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bar_title.png"]];
+    self.navigationItem.titleView = imageView;
+    
+    UIImage* image3 = [UIImage imageNamed:@"bar_btn_info"];
+    CGRect frameimg = CGRectMake(0, 0, 30, 30);
+    //UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
+    
+	UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
+	[someButton setBackgroundImage:image3 forState:UIControlStateNormal];
+	[someButton addTarget:self action:@selector(goToInfo:)
+		 forControlEvents:UIControlEventTouchUpInside];
+    
+	UIBarButtonItem *infoBtn =[[UIBarButtonItem alloc] initWithCustomView:someButton];
+    self.navigationItem.rightBarButtonItem = infoBtn;
+}
+
+-(void)goToInfo:(id)sender{
+    InfoView *v = [[InfoView alloc] initWithNibName:@"InfoView" bundle:nil];
+    [self.navigationController pushViewController:v animated:YES];
 }
 
 #pragma mark - UITableView Datasource
@@ -122,6 +147,11 @@
         [self.btnCheck setSelected:YES];
         [self.btnCheck setImage:[UIImage imageNamed:@"chek"] forState:UIControlStateSelected];
     }
+}
+
+- (IBAction)recoveryPasswordClick:(id)sender {
+    PasswordRecoveryViewViewController *v = [[PasswordRecoveryViewViewController alloc] initWithNibName:@"PasswordRecoveryViewViewController" bundle:nil];
+    [self.navigationController pushViewController:v animated:YES];
 }
 
 

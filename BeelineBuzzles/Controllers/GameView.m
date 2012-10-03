@@ -7,6 +7,7 @@
 //
 
 #import "GameView.h"
+#import "GameTimeView.h"
 
 @interface GameView ()
 
@@ -58,9 +59,6 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:nil options:nil] objectAtIndex:0];
     }
     UIView* backgroundView = [ [ UIView alloc ] initWithFrame:CGRectZero ];
-    
-
-    
     if (indexPath.row % 2 == 0){
         backgroundView.backgroundColor = [UIColor colorWithRed:0.91f green:0.91f blue:0.89f alpha:1.00f];
     } else {
@@ -77,4 +75,8 @@
     
 }
 
+- (IBAction)moreGameTimeClick:(id)sender {
+    GameTimeView *v = [[GameTimeView alloc] initWithNibName:@"GameTimeView" bundle:nil];
+    [self.tabBarController.navigationController pushViewController:v animated:YES];
+}
 @end

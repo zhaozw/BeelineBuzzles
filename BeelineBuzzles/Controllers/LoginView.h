@@ -19,9 +19,11 @@
 - (IBAction)loginClick:(id)sender;
 - (IBAction)registerClick:(id)sender;
 - (IBAction)checkClick:(id)sender;
+- (IBAction)recoveryPasswordClick:(id)sender;
 
 /**
  Инициализация TabBar
  */
 -(UITabBarController *)tabBar;
+-(void)goToInfo:(id)sender;
 @end

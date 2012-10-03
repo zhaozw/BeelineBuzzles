@@ -37,8 +37,8 @@
     [self initTopBar];
 }
 -(void)initTopBar{
-    UIImage* image3 = [UIImage imageNamed:@"btn_game"];
-    CGRect frameimg = CGRectMake(0, 0, 51, 30);
+    UIImage* image3 = [UIImage imageNamed:@"btn_back"];
+    CGRect frameimg = CGRectMake(0, 0, 57, 30);
     
 	UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
 	[someButton setBackgroundImage:image3 forState:UIControlStateNormal];
@@ -47,7 +47,8 @@
     
 	UIBarButtonItem *backBtn =[[UIBarButtonItem alloc] initWithCustomView:someButton];
     self.navigationItem.leftBarButtonItem = backBtn;
-    self.navigationItem.title = @"Способы оплаты";
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bar_title_schet.png"]];
+    self.navigationItem.titleView = imageView;
 }
 
 -(void)leftBarItemClick:(id)sender{

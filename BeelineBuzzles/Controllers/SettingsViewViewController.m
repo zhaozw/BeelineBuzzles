@@ -37,15 +37,18 @@
 
 -(void)initUI{
     [self initTopBar];
-    self.scrollVIew.contentSize =CGSizeMake(320,700);
+    self.scrollVIew.contentSize =CGSizeMake(320,740);
     self.fieldCurrentPassword.delegate = self;
     self.fieldNewPassword.delegate = self;
     self.fieldRepeatPassword.delegate = self;
 }
 
 -(void)initTopBar{
-    UIImage* image3 = [UIImage imageNamed:@"btn_game"];
-    CGRect frameimg = CGRectMake(0, 0, 51, 30);
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bar_title_settings.png"]];
+    self.navigationItem.titleView = imageView;
+    
+    UIImage* image3 = [UIImage imageNamed:@"btn_back"];
+    CGRect frameimg = CGRectMake(0, 0, 57, 30);
     
 	UIButton *someButton = [[UIButton alloc] initWithFrame:frameimg];
 	[someButton setBackgroundImage:image3 forState:UIControlStateNormal];
@@ -54,8 +57,6 @@
     
 	UIBarButtonItem *backBtn =[[UIBarButtonItem alloc] initWithCustomView:someButton];
     self.navigationItem.leftBarButtonItem = backBtn;
-    
-    self.navigationItem.title = @"Настройки";
 }
 
 -(void)leftBarItemClick:(id)sender{

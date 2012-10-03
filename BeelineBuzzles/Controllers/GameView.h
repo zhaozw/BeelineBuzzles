@@ -14,5 +14,6 @@
  */
 @interface GameView : ViewInsideTabController<UITableViewDataSource, UITableViewDelegate>
 
+- (IBAction)moreGameTimeClick:(id)sender;
 @property (strong, nonatomic) IBOutlet UITableView *gamesTable;
 @end
